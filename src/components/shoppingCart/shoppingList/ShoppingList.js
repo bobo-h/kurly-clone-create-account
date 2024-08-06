@@ -1,8 +1,8 @@
 import React, { useState, useEffect } from "react";
 import ShoppingListGroup from "./ShoppingListGroup";
 import ShoppingListCheck from "./ShoppingListCheck";
-import { sun, water } from "../../assets/icon";
-import { basilPesto, cookie, egg, peach } from "../../assets/item";
+import { sun, water } from "../../../assets/icon";
+import { basilPesto, cookie, egg, peach } from "../../../assets/item";
 
 const ShoppingList = ({ setCartDetails }) => {
   const [items, setItems] = useState([
@@ -92,8 +92,8 @@ const ShoppingList = ({ setCartDetails }) => {
   const itemsCount = items.length;
 
   useEffect(() => {
-    setCartDetails({ totalPrice, totalDiscount, hasCheckedItems });
-  }, [totalPrice, totalDiscount, hasCheckedItems, setCartDetails]);
+    setCartDetails({ totalPrice, totalDiscount, hasCheckedItems, itemsCount });
+  }, [totalPrice, totalDiscount, hasCheckedItems, itemsCount, setCartDetails]);
 
   const groupedItems = items.reduce((acc, item) => {
     if (!acc[item.title]) {
