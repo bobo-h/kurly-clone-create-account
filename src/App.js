@@ -1,9 +1,8 @@
-import "./App.css";
 import "./index.css";
-import ShoppingCart from "./components/shoppingCart/ShoppingCart";
+import CreateAccount from "./components/CreateAccount/CreateAccount";
 
 function App() {
-  return <ShoppingCart />;
+  return <CreateAccount />;
 }
 
 export default App;
